@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ContactApp</string>
+    <string name="photo">Photo</string>
+    <string name="phone">Phone</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="back">Back</string>
+</resources>

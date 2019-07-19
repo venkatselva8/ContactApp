@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/light_white"
+        android:id="@+id/constraint_contact_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/top_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/colorAccent"
+            app:layout_constraintHorizontal_bias="1.0"/>
+
+    <ImageView
+            android:layout_width="100dp"
+            android:src="@drawable/ic_person"
+            android:layout_height="100dp"
+            android:layout_marginTop="132dp"
+            app:layout_constraintTop_toTopOf="@+id/top_view"
+            app:layout_constraintStart_toStartOf="@+id/top_view"
+            app:layout_constraintEnd_toEndOf="@+id/top_view"
+            android:layout_marginEnd="8dp"
+            android:background="@color/white"
+            android:contentDescription="@string/photo"
+            app:layout_constraintHorizontal_bias="0.511"
+            android:id="@+id/imv_person"/>
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:lines="1"
+            app:layout_constraintStart_toStartOf="@+id/top_view"
+            app:layout_constraintEnd_toEndOf="@+id/top_view"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/top_view"
+            android:layout_marginTop="92dp"
+            app:layout_constraintHorizontal_bias="0.511"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="4dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="52dp"
+            app:layout_constraintTop_toBottomOf="@id/imv_person"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/card_user_detail">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+        >
+
+            <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_phone_number"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="16dp"
+                    android:drawableStart="@drawable/ic_call_24dp"
+                    android:textColor="@color/black"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/view2"
+                    android:background="@color/grey_material"
+                    android:layout_margin="12dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_email"
+                    android:drawablePadding="16dp"
+                    android:drawableStart="@drawable/ic_mail_24dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_24dp"
+            android:id="@+id/back_button"
+            android:padding="12dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/back"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/ll_action"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/card_user_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="72dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.234">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_message_48dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_call_48dp"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_mail_48dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
